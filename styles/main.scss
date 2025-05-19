@@ -1,0 +1,20 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "./blocks/button";
+@use "./blocks/burger-button";
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./blocks/about";
+@use "./blocks/result";
+@use "./blocks/team";
+@use "./blocks/card";
+@use "./blocks/slider-button";
+@use "./blocks/services";
+@use "./blocks/package";
+@use "./blocks/register";
+@use "./blocks/form";
+@use "./blocks/footer";
