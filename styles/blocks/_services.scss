@@ -1,0 +1,32 @@
+@use "../helpers/" as *;
+
+.services {
+  background-color: var(--color-light);
+  padding-block: fluid(120, 60);
+
+  &__inner {
+    width: 100%;
+    max-width: rem(1160);
+  }
+
+  &__title {
+    margin-bottom: fluid(60, 40);
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: rem(30) rem(40);
+
+    @include laptop {
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+}

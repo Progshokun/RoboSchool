@@ -1,0 +1,33 @@
+@use "../helpers/" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10);
+
+  @include mobile {
+  }
+
+  &__input {
+    display: grid;
+    border-radius: rem(5);
+    padding-block: rem(19);
+    padding-left: rem(20);
+    border: none;
+
+    &::placeholder {
+      color: var(--color-dark-alt);
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: rem(19) rem(182);
+    background-color: var(--color-dark);
+    flex-shrink: 0;
+
+    @include mobile {
+      padding-inline: rem(90);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "../helpers/" as *;
+
+.about {
+  background-color: var(--color-light);
+  padding-block: fluid(120, 60);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: rem(1160);
+  }
+
+  &__description {
+    @include fluid-text(30, 20);
+
+    color: var(--color-dark);
+    margin-bottom: rem(60);
+    max-width: rem(890);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &-advantages {
+      @include fluid-text(70, 60);
+
+      font-weight: 600;
+      color: var(--color-red);
+    }
+
+    &-description {
+      line-height: 1.6;
+      color: var(--color-dark-alt);
+    }
+  }
+}

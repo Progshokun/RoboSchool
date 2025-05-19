@@ -1,0 +1,32 @@
+@use "../helpers/" as *;
+
+.team {
+  position: relative;
+  background-color: var(--color-light);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: rem(1160);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem(10);
+  }
+
+  &__title {
+    margin-bottom: fluid(60, 40);
+
+    @include mobile-s {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+  }
+}

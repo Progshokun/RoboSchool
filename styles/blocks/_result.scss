@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.result {
+  background-color: var(--color-light-alt);
+  padding-block: fluid(100, 50);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: rem(1160);
+  }
+
+  &__title {
+    margin-bottom: fluid(60, 40);
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+      row-gap: rem(30);
+    }
+  }
+
+  &__item {
+    &-title {
+      margin-bottom: fluid(20, 10);
+    }
+
+    &-description {
+      color: var(--color-dark-alt);
+    }
+  }
+}

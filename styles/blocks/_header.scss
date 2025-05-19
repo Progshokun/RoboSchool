@@ -1,0 +1,73 @@
+@use "../helpers/" as *;
+
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: fluid(30, 10);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__logo {
+    @include mobile {
+      width: rem(136);
+      order: 0;
+    }
+  }
+
+  &__button {
+    order: 2;
+  }
+
+  &__menu {
+    &.is-active {
+      .header__list {
+        @include abs-center;
+
+        z-index: 10;
+        font-size: rem(30);
+        font-weight: 600;
+        flex-direction: column;
+        row-gap: rem(20);
+        background-color: var(--color-dark);
+        width: 100%;
+        padding-block: 100vh;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+  }
+
+  &__link,
+  &__phone {
+    position: relative;
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__phone {
+    font-size: rem(30);
+    font-weight: 600;
+
+    @include mobile {
+      @include square(44);
+
+      order: 1;
+      padding: rem(12);
+      border: rem(1) solid rgba(255, 255, 255, 0.4);
+      border-radius: rem(10);
+      margin-left: auto;
+      margin-right: rem(10);
+    }
+  }
+}

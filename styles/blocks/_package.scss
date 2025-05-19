@@ -1,0 +1,54 @@
+@use "../helpers/" as *;
+
+.package {
+  &__item {
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: rem(20);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+
+      @include mobile {
+      }
+    }
+  }
+
+  &__body {
+    color: var(--color-dark);
+    padding: rem(40);
+    text-align: center;
+    font-weight: 600;
+    transition-duration: var(--transition-duration);
+
+    @include mobile {
+      padding-inline: rem(20);
+    }
+
+    @include hover {
+      color: var(--color-light);
+    }
+  }
+
+  &__lvl {
+    font-size: rem(30);
+    margin-bottom: fluid(60, 40);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    height: rem(130);
+    margin-bottom: fluid(60, 40);
+  }
+
+  &__price {
+    font-size: rem(50);
+  }
+
+  &__direction {
+    font-weight: 400;
+  }
+}

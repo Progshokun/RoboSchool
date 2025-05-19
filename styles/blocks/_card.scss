@@ -1,0 +1,49 @@
+@use "../helpers/" as *;
+
+.card {
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    background-color: rgba(20, 16, 36, 0.08);
+    border-radius: rem(40);
+    height: rem(5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark);
+    border-radius: rem(40);
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__body {
+    display: grid;
+    row-gap: rem(20);
+    padding-bottom: fluid(77, 41);
+  }
+
+  &__image {
+    border-radius: rem(20);
+    height: rem(500);
+
+    @include mobile {
+      width: rem(220);
+      height: rem(306);
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(10);
+  }
+
+  &__link {
+    color: var(--color-red);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}
